@@ -33,10 +33,11 @@ public class MainCollectionsTest {
 		 */
 
 		List<Integer> integers = Arrays.asList(5, 2, 6, 9);
-		integers.sort((Integer i1, Integer i2) -> i1.compareTo(i2));
-		integers.forEach(System.out::println);
+		//integers.sort((i1,i2) -> i2.compareTo(i1));
+		integers.stream().sorted(Comparator.comparing(Integer::intValue)).forEach(System.out::println);
+		//integers.forEach(System.out::println);
 
-		list.stream().filter(s -> s != "yahia").map(String::toUpperCase).forEach(System.out::println);
+		//list.stream().filter(s -> s != "yahia").map(String::toUpperCase).forEach(System.out::println);
 
 	}
 
